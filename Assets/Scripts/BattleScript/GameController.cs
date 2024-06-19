@@ -11,6 +11,7 @@ public class GameController : MonoBehaviour
     private GameObject battleMenu; // Reference to the battle menu UI
 
     // Text objects for displaying battle messages
+    [Header("BattleScene")]
     public TMP_Text battleText;
     public TMP_Text victoryText;
     public TMP_Text playerDefeatedText;
@@ -25,7 +26,8 @@ public class GameController : MonoBehaviour
 
     // Initialize fighter stats and start the battle
     void Start()
-    {
+    { 
+
         fighterStats = new List<FighterStats>();
 
         // Get player and enemy stats

@@ -31,7 +31,17 @@ public class EnemyAction : MonoBehaviour
 
     // Animator component for handling animations
     [SerializeField]
-    private Animator animator;
+    private Animator CompanionAnimator;
+
+    public TransitionScript transition;
+
+    private CollisionDetection collisionDetection;
+
+    private void Start()
+    {
+        collisionDetection = FindObjectOfType<CollisionDetection>();
+
+    }
 
     // Initialize references to player, enemy, and AudioManager
     private void Awake()
@@ -63,7 +73,7 @@ public class EnemyAction : MonoBehaviour
                 audioManager.PlaySFX(audioManager.attack);
                 if (tag == "Player")
                 {
-                    animator.Play("attackElara");
+                    CompanionAnimator.Play("attackElara");
                 }
                     break;
 
@@ -73,19 +83,31 @@ public class EnemyAction : MonoBehaviour
                     if (tag == "Player")
                     {
                     GameControllerObj.GetComponent<GameController>().waterMagic.gameObject.SetActive(true);
-                    animator.Play("rangeElara");   
+                    CompanionAnimator.Play("rangeElara");   
                     }
                 break;
 
             case "run":
                 // Play run sound effect
+                transition.endingSceneTransition.SetActive(true);
                 audioManager.PlaySFX(audioManager.run);
-                SceneManager.LoadScene(2);
+                if (collisionDetection != null)
+                {
+                    collisionDetection.HandleBattleOutcome(false);
+                }
+                StartCoroutine(runToOverworld());
                 break;
 
             default:
                 Debug.LogWarning($"Unknown action: {btn}");
                 break;
         }
+
+    }
+
+    private IEnumerator runToOverworld()
+    {
+        yield return new WaitForSeconds(2);
+        SceneManager.LoadScene(3);
     }
 }

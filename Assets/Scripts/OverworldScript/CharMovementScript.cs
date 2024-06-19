@@ -11,6 +11,7 @@ public class CharMovementScript : MonoBehaviour
     private bool isMoving;
     private Vector2 input;
     private Animator animator;
+    public LayerMask solidObjectsLayer;
     private Vector2 lastDirection;
     private SpriteRenderer elaraRenderer;
     private SpriteRenderer meryllRenderer;
@@ -20,6 +21,7 @@ public class CharMovementScript : MonoBehaviour
         animator = GetComponent<Animator>();
         elaraRenderer = GetComponent<SpriteRenderer>();
         meryllRenderer = meryllTransform.GetComponent<SpriteRenderer>();
+        LoadPositions(); // Load positions on awake
     }
 
     private void Update()
@@ -41,7 +43,10 @@ public class CharMovementScript : MonoBehaviour
                 targetPos.x += input.x;
                 targetPos.y += input.y;
 
-                StartCoroutine(Move(targetPos));
+                if (isWalkable(targetPos))
+                {
+                    StartCoroutine(Move(targetPos));
+                }
             }
         }
 
@@ -68,6 +73,16 @@ public class CharMovementScript : MonoBehaviour
         isMoving = false;
     }
 
+    private bool isWalkable(Vector3 targetPos)
+    {
+        if (Physics2D.OverlapCircle(targetPos, 0.2f, solidObjectsLayer) != null)
+        {
+            return false;
+        }
+
+        return true;
+    }
+
     private void UpdateSortingOrder()
     {
         if (lastDirection.y > 0) // Moving up
@@ -79,6 +94,27 @@ public class CharMovementScript : MonoBehaviour
         {
             elaraRenderer.sortingOrder = 1;
             meryllRenderer.sortingOrder = 0;
+        }
+    }
+
+    public void SavePositions()
+    {
+        PlayerPrefs.SetFloat("ElaraPosX", transform.position.x);
+        PlayerPrefs.SetFloat("ElaraPosY", transform.position.y);
+        PlayerPrefs.SetFloat("MeryllPosX", meryllTransform.position.x);
+        PlayerPrefs.SetFloat("MeryllPosY", meryllTransform.position.y);
+        PlayerPrefs.Save();
+    }
+
+    public void LoadPositions()
+    {
+        if (PlayerPrefs.HasKey("ElaraPosX") && PlayerPrefs.HasKey("ElaraPosY") &&
+            PlayerPrefs.HasKey("MeryllPosX") && PlayerPrefs.HasKey("MeryllPosY"))
+        {
+            Vector3 elaraPosition = new Vector3(PlayerPrefs.GetFloat("ElaraPosX"), PlayerPrefs.GetFloat("ElaraPosY"), transform.position.z);
+            Vector3 meryllPosition = new Vector3(PlayerPrefs.GetFloat("MeryllPosX"), PlayerPrefs.GetFloat("MeryllPosY"), meryllTransform.position.z);
+            transform.position = elaraPosition;
+            meryllTransform.position = meryllPosition;
         }
     }
 }

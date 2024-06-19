@@ -34,7 +34,7 @@ public class ButtonFunc : MonoBehaviour
             hero.GetComponent<EnemyAction>().SelectAttack("run");
         } else
         {
-            SceneManager.LoadScene(0);
+            SceneManager.LoadScene(3);
         }
     }
 }

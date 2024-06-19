@@ -4,11 +4,14 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 
 public class MenuBtnFunction : MonoBehaviour
-{
+{ 
+    public TransitionScript transition;
+
     //Functions for going to different screens
     public void PlayGame()
     {
-        SceneManager.LoadSceneAsync(2);
+        transition.endingSceneTransition.SetActive(true);
+        StartCoroutine(StartGame());
     }
     //Function for going to settings
     public void GoSettings()
@@ -25,4 +28,12 @@ public class MenuBtnFunction : MonoBehaviour
     {
         SceneManager.LoadSceneAsync(0);
     }
+
+    private IEnumerator StartGame()
+    {
+        yield return new WaitForSeconds(1);       
+        SceneManager.LoadScene(2);
+    }
+
+
 }

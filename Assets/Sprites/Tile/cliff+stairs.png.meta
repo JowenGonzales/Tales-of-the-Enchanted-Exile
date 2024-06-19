@@ -1,0 +1,491 @@
+fileFormatVersion: 2
+guid: 09215dbb4c66b7e4c82cb988617eaa92
+TextureImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 12
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMasterTextureLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 22
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Server
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: cliff+stairs_4
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 176
+        width: 71
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 69cb6137b6c08844187248f3a223b545
+      internalID: -924327014
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cliff+stairs_5
+      rect:
+        serializedVersion: 2
+        x: 71
+        y: 177
+        width: 50
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4772500d0d372864d8ead5fe9782bdba
+      internalID: -107834644
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cliff+stairs_10
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 135
+        width: 16
+        height: 41
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fd4ad4e06ab05ae4b910cc6eeea00805
+      internalID: -2077151732
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cliff+stairs_49
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 72
+        width: 71
+        height: 63
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5cc5bf47c598c1f43823883ef9407dc3
+      internalID: 1462953325
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cliff+stairs_69
+      rect:
+        serializedVersion: 2
+        x: 71
+        y: 72
+        width: 48
+        height: 82
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: be737cfc32c357c43a7d6675752aed6a
+      internalID: -1376298588
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cliff+stairs_15
+      rect:
+        serializedVersion: 2
+        x: 119
+        y: 119
+        width: 16
+        height: 60
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 78b71627123b68346980e659cc5cca30
+      internalID: -1860167308
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cliff+stairs_22
+      rect:
+        serializedVersion: 2
+        x: 55
+        y: 136
+        width: 16
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 767dd9299bda3f14db8440d45cd869c1
+      internalID: 2124358372
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cliff+stairs_30
+      rect:
+        serializedVersion: 2
+        x: 167
+        y: 120
+        width: 73
+        height: 59
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 575561cfaa78a2043877a8109e6b5aea
+      internalID: -1198170728
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cliff+stairs_73
+      rect:
+        serializedVersion: 2
+        x: 139
+        y: 72
+        width: 34
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ed962005714b6414abde59bef48f5ca7
+      internalID: -525342036
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      cliff+stairs_0: 1059860119
+      cliff+stairs_1: 1320094972
+      cliff+stairs_10: -2077151732
+      cliff+stairs_100: 227618013
+      cliff+stairs_101: 1195263818
+      cliff+stairs_102: 1957047383
+      cliff+stairs_103: -537976228
+      cliff+stairs_104: 874940215
+      cliff+stairs_105: -783276871
+      cliff+stairs_106: 676272499
+      cliff+stairs_107: -299534690
+      cliff+stairs_108: -17381470
+      cliff+stairs_109: -787433749
+      cliff+stairs_11: -1116249093
+      cliff+stairs_110: -1420150476
+      cliff+stairs_111: -462200440
+      cliff+stairs_112: 1401416534
+      cliff+stairs_113: 830446630
+      cliff+stairs_114: 1785819653
+      cliff+stairs_115: 1823306881
+      cliff+stairs_116: -2131891544
+      cliff+stairs_117: -1902624319
+      cliff+stairs_118: 1746983176
+      cliff+stairs_119: -1354225475
+      cliff+stairs_12: 1382902991
+      cliff+stairs_120: -807479448
+      cliff+stairs_121: -335592375
+      cliff+stairs_122: -104621166
+      cliff+stairs_123: -156171601
+      cliff+stairs_124: 1445187457
+      cliff+stairs_125: -1107870603
+      cliff+stairs_126: -649419394
+      cliff+stairs_127: -1641705550
+      cliff+stairs_128: 1261405578
+      cliff+stairs_129: -1587095925
+      cliff+stairs_13: 2065431945
+      cliff+stairs_130: 717029136
+      cliff+stairs_131: -513505850
+      cliff+stairs_132: -982372978
+      cliff+stairs_133: -274940224
+      cliff+stairs_134: -344045962
+      cliff+stairs_135: 1038431474
+      cliff+stairs_136: -1242436130
+      cliff+stairs_137: 1962791203
+      cliff+stairs_138: 187623471
+      cliff+stairs_139: -616813176
+      cliff+stairs_14: 1987812442
+      cliff+stairs_140: 187730437
+      cliff+stairs_141: -1534896738
+      cliff+stairs_142: -767494893
+      cliff+stairs_143: -1940274162
+      cliff+stairs_144: 56044704
+      cliff+stairs_145: -2134956297
+      cliff+stairs_146: -135272808
+      cliff+stairs_147: 1421579594
+      cliff+stairs_148: -376685805
+      cliff+stairs_149: -681956652
+      cliff+stairs_15: -1860167308
+      cliff+stairs_150: -506687281
+      cliff+stairs_151: -652076838
+      cliff+stairs_152: 1865325486
+      cliff+stairs_153: 948964860
+      cliff+stairs_154: 1789832454
+      cliff+stairs_155: -832857034
+      cliff+stairs_156: -273062128
+      cliff+stairs_157: 1868054602
+      cliff+stairs_158: 1760782684
+      cliff+stairs_159: 272355671
+      cliff+stairs_16: 1541478299
+      cliff+stairs_160: 1944940973
+      cliff+stairs_161: -1506182511
+      cliff+stairs_162: 951273450
+      cliff+stairs_163: -1930801268
+      cliff+stairs_164: -813125673
+      cliff+stairs_165: 1635220235
+      cliff+stairs_166: 1103428018
+      cliff+stairs_17: 1676040439
+      cliff+stairs_18: 1078531544
+      cliff+stairs_19: 485601070
+      cliff+stairs_2: -806479295
+      cliff+stairs_20: 1198809664
+      cliff+stairs_21: -423693801
+      cliff+stairs_22: 2124358372
+      cliff+stairs_23: 381697782
+      cliff+stairs_24: 1918258045
+      cliff+stairs_25: -483874361
+      cliff+stairs_26: 1492038557
+      cliff+stairs_27: 1271805832
+      cliff+stairs_28: -597388982
+      cliff+stairs_29: 1591942975
+      cliff+stairs_3: -1031047563
+      cliff+stairs_30: -1198170728
+      cliff+stairs_31: -927330903
+      cliff+stairs_32: 8661930
+      cliff+stairs_33: 1561613876
+      cliff+stairs_34: 1514173567
+      cliff+stairs_35: -178574698
+      cliff+stairs_36: -1500807743
+      cliff+stairs_37: -1526248589
+      cliff+stairs_38: -37500372
+      cliff+stairs_39: -1341527956
+      cliff+stairs_4: -924327014
+      cliff+stairs_40: 1899757654
+      cliff+stairs_41: -1745649974
+      cliff+stairs_42: 107053414
+      cliff+stairs_43: -1571766064
+      cliff+stairs_44: 1339576103
+      cliff+stairs_45: 444233447
+      cliff+stairs_46: 588675637
+      cliff+stairs_47: -611220395
+      cliff+stairs_48: 689702950
+      cliff+stairs_49: 1462953325
+      cliff+stairs_5: -107834644
+      cliff+stairs_50: 536546721
+      cliff+stairs_51: 2138221437
+      cliff+stairs_52: -1025645517
+      cliff+stairs_53: 1247064315
+      cliff+stairs_54: -1782678757
+      cliff+stairs_55: -1124100706
+      cliff+stairs_56: -1043456790
+      cliff+stairs_57: 936175845
+      cliff+stairs_58: 1592521271
+      cliff+stairs_59: -1925778102
+      cliff+stairs_6: -198181550
+      cliff+stairs_60: -1393299572
+      cliff+stairs_61: -1306396463
+      cliff+stairs_62: 1830766357
+      cliff+stairs_63: 1354148163
+      cliff+stairs_64: -1624495576
+      cliff+stairs_65: 1109825490
+      cliff+stairs_66: 307149542
+      cliff+stairs_67: -1945246868
+      cliff+stairs_68: -2130287767
+      cliff+stairs_69: -1376298588
+      cliff+stairs_7: -703803731
+      cliff+stairs_70: -1252892542
+      cliff+stairs_71: 642130317
+      cliff+stairs_72: 1229398456
+      cliff+stairs_73: -525342036
+      cliff+stairs_74: 819439834
+      cliff+stairs_75: -46229934
+      cliff+stairs_76: 919349923
+      cliff+stairs_77: 1325934113
+      cliff+stairs_78: -1169084681
+      cliff+stairs_79: -616378177
+      cliff+stairs_8: 1599277074
+      cliff+stairs_80: 1742565905
+      cliff+stairs_81: 1921302161
+      cliff+stairs_82: -671734247
+      cliff+stairs_83: -1525989277
+      cliff+stairs_84: 1653149099
+      cliff+stairs_85: -1177541503
+      cliff+stairs_86: 155614310
+      cliff+stairs_87: -1977725421
+      cliff+stairs_88: 1915360600
+      cliff+stairs_89: 1625530639
+      cliff+stairs_9: 1836153512
+      cliff+stairs_90: -739415460
+      cliff+stairs_91: -1477297138
+      cliff+stairs_92: -523009326
+      cliff+stairs_93: -447520919
+      cliff+stairs_94: 82779188
+      cliff+stairs_95: 1725509821
+      cliff+stairs_96: 1069041272
+      cliff+stairs_97: 1991940435
+      cliff+stairs_98: -260904201
+      cliff+stairs_99: 1419492174
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

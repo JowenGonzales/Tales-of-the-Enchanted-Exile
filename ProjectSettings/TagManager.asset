@@ -8,6 +8,13 @@ TagManager:
   - GameMusic
   - Dead
   - Audio
+  - Knight
+  - KnightElite
+  - OverworldMusic
+  - Knight1
+  - Knight2
+  - Knight3
+  - KnightElite1
   layers:
   - Default
   - TransparentFX
@@ -16,7 +23,7 @@ TagManager:
   - Water
   - UI
   - 
-  - 
+  - SolidObjects
   - 
   - 
   - 
@@ -48,21 +55,30 @@ TagManager:
   - name: Background
     uniqueID: 1592947913
     locked: 0
+  - name: Foreground
+    uniqueID: 1897778209
+    locked: 0
   - name: Character
     uniqueID: 3843048967
     locked: 0
   - name: Enemy
     uniqueID: 1394758217
     locked: 0
-  - name: Corpse
+  - name: Corpses
     uniqueID: 859396901
     locked: 0
   - name: VFX
     uniqueID: 3530463677
+    locked: 0
+  - name: Particles
+    uniqueID: 558157059
     locked: 0
   - name: UI
     uniqueID: 3116212883
     locked: 0
   - name: Button
     uniqueID: 819072579
+    locked: 0
+  - name: Transition
+    uniqueID: 527606743
     locked: 0

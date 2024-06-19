@@ -7,15 +7,16 @@ using UnityEngine.SceneManagement;
 
 public class FighterStats : MonoBehaviour, IComparable
 {
-    // Animator component for handling animations
+
     [SerializeField]
     private Animator animatorMeryll;
 
-    // Animator component for handling animations
     [SerializeField]
     private Animator animatorElara;
 
-    // UI elements for health and magic fill bars
+    [SerializeField]
+    private Animator animatorEnemy;
+
     [SerializeField]
     private GameObject healthFill;
 
@@ -53,7 +54,16 @@ public class FighterStats : MonoBehaviour, IComparable
 
     private AudioManager audioManager;
 
-    // Initialize references and set initial values
+    public TransitionScript transition;
+
+    private CollisionDetection collisionDetection;
+
+    private void Start()
+    {
+        collisionDetection = FindObjectOfType<CollisionDetection>();
+
+    }
+
     private void Awake()
     {
         healthTransform = healthFill.GetComponent<RectTransform>();
@@ -73,7 +83,6 @@ public class FighterStats : MonoBehaviour, IComparable
         enemy = GameObject.FindGameObjectWithTag("Enemy");
     }
 
-    // Handle updates to magic fill
     public void UpdateMagicFill(float cost)
     {
         if (cost > 0)
@@ -84,32 +93,27 @@ public class FighterStats : MonoBehaviour, IComparable
         }
     }
 
-    // Check if the fighter is dead
     public bool GetDead()
     {
         return dead;
     }
 
-    // Continue the game after a delay
     private void ContinueGame()
     {
         Debug.Log("ContinueGame called");
         GameControllerObj.GetComponent<GameController>().NextTurn();
     }
 
-    // Calculate the next turn for the fighter
     public void CalculateNextTurn(int currentTurn)
     {
         nextTurn = currentTurn + Mathf.CeilToInt(100f / speed);
     }
 
-    // Compare to another fighter to determine turn order
     public int CompareTo(object otherStats)
     {
         return nextTurn.CompareTo(((FighterStats)otherStats).nextTurn);
     }
 
-    // Handle the death of the fighter
     private void HandleDeath()
     {
         dead = true;
@@ -120,31 +124,41 @@ public class FighterStats : MonoBehaviour, IComparable
         {
             audioManager.PlaySFX(audioManager.victory);
             GameControllerObj.GetComponent<GameController>().victoryText.gameObject.SetActive(true);
-            StartCoroutine(EndBattle());
+            if (collisionDetection != null)
+            {
+                collisionDetection.HandleBattleOutcome(true);
+            }
+            StartCoroutine(BattleVictory());
         }
         else if (enemy.tag == "Enemy")
         {
             audioManager.PlaySFX(audioManager.death);
             GameControllerObj.GetComponent<GameController>().playerDefeatedText.gameObject.SetActive(true);
+            StartCoroutine(BattleLose());
         }
     }
 
-    // Coroutine to end the battle and load the next scene
-    private IEnumerator EndBattle()
+    private IEnumerator BattleVictory()
     {
-        yield return new WaitForSeconds(6);
-        SceneManager.LoadScene(2);
+        yield return new WaitForSeconds(3);
+        transition.endingSceneTransition.SetActive(true);
+        SceneManager.LoadScene(3);
     }
 
+    private IEnumerator BattleLose()
+    {
+        yield return new WaitForSeconds(3);
+        transition.endingSceneTransition.SetActive(true);
+        PlayerPrefs.DeleteAll();
+        SceneManager.LoadScene(0);
+    }
 
-    // Update the health fill bar
     private void UpdateHealthFill()
     {
         xNewHealthScale = healthScale.x * (health / startHealth);
         healthFill.transform.localScale = new Vector2(xNewHealthScale, healthScale.y);
     }
 
-    // Display the damage dealt
     private void DisplayDamage(float damage)
     {
         var battleText = GameControllerObj.GetComponent<GameController>().battleText;
@@ -152,14 +166,16 @@ public class FighterStats : MonoBehaviour, IComparable
         battleText.text = damage.ToString();
     }
 
-    // Handle receiving damage
     public void ReceiveDamage(float damage)
     {
         health -= damage;
         if (tag == "Player")
         {
-            animatorMeryll.Play("takeDamage");
+            animatorMeryll.Play("takeDamageMeryll");
             animatorElara.Play("takeDamageElara");
+        } else if (tag == "Enemy")
+        {
+            animatorEnemy.Play("takeDamageEnemy");
         }
 
         if (health <= 0)
@@ -174,5 +190,4 @@ public class FighterStats : MonoBehaviour, IComparable
 
         Invoke(nameof(ContinueGame), 2);
     }
-
 }

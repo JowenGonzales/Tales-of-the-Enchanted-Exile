@@ -37,10 +37,10 @@ public class SeamlessMusic : MonoBehaviour
         }
     }
 
-    // Stops the music when entering the BattleScene
+    // Stops the music when entering the BattleScene, OverworldScene, or Cutscene
     private void OnSceneLoaded(Scene scene, LoadSceneMode mode)
     {
-        if (scene.name == "BattleScene")
+        if (scene.name == "BattleScene" || scene.name == "OverworldScene" || scene.name == "Cutscene")
         {
             // Destroy the music object when the BattleScene is loaded
             Destroy(gameObject);

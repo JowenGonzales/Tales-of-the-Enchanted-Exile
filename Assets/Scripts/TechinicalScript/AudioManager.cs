@@ -5,12 +5,10 @@ public class AudioManager : MonoBehaviour
 {
     // Audio sources for music and sound effects
     [Header("Audio Source")]
-    [SerializeField] AudioSource musicSource;
     [SerializeField] AudioSource SFXSource;
 
     // Audio clips for various sounds
     [Header("Audio Clip")]
-    public AudioClip backgroundMusic;
     public AudioClip attack;
     public AudioClip magicCast;
     public AudioClip run;
@@ -22,13 +20,6 @@ public class AudioManager : MonoBehaviour
     [Header("Audio Mixer")]
     public AudioMixer audioMixer;
 
-    // Start is called before the first frame update
-    public void Start()
-    {
-        // Set and play the background music
-        musicSource.clip = backgroundMusic;
-        musicSource.Play();
-    }
 
     // Play a sound effect
     public void PlaySFX(AudioClip clip)
