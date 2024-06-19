@@ -24,6 +24,7 @@ public class ButtonFunc : MonoBehaviour
         Debug.Log($"Button {btn} clicked");
         if (btn.CompareTo("AttackBtn") == 0) 
         {
+            Debug.Log("Attacks");
             hero.GetComponent<EnemyAction>().SelectAttack("attack");
         }
         else if (btn.CompareTo("RangeBtn") == 0)
