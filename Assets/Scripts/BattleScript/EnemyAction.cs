@@ -2,6 +2,13 @@ using System.Collections;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
+
+/**
+ * 
+ * 
+ * This is the class for player
+ * 
+ */
 public class EnemyAction : MonoBehaviour
 {
     private GameObject hero;

@@ -11,7 +11,7 @@ public class ButtonFunc : MonoBehaviour
 
     private GameObject hero;
 
-    //Function for listening to the action buttons (attack, range)
+    // Function for listening to the action buttons (attack, range)
     void Start()
     {
         string temp = gameObject.name;
